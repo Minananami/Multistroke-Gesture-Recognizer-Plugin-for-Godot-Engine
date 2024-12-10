@@ -1,0 +1,17 @@
+# System files
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.tmp
+*.log
+
+# Godot specific
+.import/
+.godot/
+*.godot.import
+*.mono
+export_presets.cfg
+
+# Personal settings
+settings.json
