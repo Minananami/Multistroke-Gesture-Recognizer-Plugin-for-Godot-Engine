@@ -29,15 +29,21 @@ This plugin provides a gesture-cloud recognition system for 2D hand-drawn symbol
    - Append variations to existing types with auto indexing of file names.
 
 3. **Implementing in games**:
-   If you want to integrate the recognizer into your custom code - look how it is done in the GR_interface.gd:
-   - Create an instance of the GestureRecognizer class. You can then load gestures from a specified directory containing saved gesture resources (.tres files).
+   If you want to integrate the recognizer into your custom code - look how it is done in the `GR_interface.gd`:
+   - Create an instance of the `GestureRecognizer` class. You can then load gestures from a specified directory containing saved gesture resources (.tres files).
+   ```
    var recognizer = GestureRecognizer.new()
    recognizer.LoadGesturesFromResources("res://addons/gesture_recognizer/resources/gestures/")
+   ```
    - The algorithm requires a set of points representing the user-drawn gesture. Each point should be an instance of the Point class, containing x, y, and id (stroke ID). You can collect these points manually from user input, similar to how it's done in the plugin interface's _on_drawing_area_input function.
+   ```
    var new_point = recognizer.Point.new(local_position.x, local_position.y, current_gesture_id)
    drawing_points[].append(new_point)
+   ```
    - You should flatten the points array before using the Recognize method. Adjust the minimum score threshold by your needs. The Recognize method returns a dictionary {"name": best_match, "score": best_score}.
+   ```
    var flattened_points = []
    for stroke in drawing_points:
 	flattened_points += stroke
    recognition_result = recognizer.Recognize(flattened_points, min_score_threshold)
+   ```
