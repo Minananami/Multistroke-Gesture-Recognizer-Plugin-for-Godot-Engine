@@ -1,0 +1,1 @@
+Gesture_recognizer/resources/gestures/GesturesResource.gd
