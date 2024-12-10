@@ -1,0 +1,83 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl11vosuumq7w"]
+
+[ext_resource type="Script" path="res://addons/Gesture_recognizer/GR_interface.gd" id="1_l07jc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bag8f"]
+bg_color = Color(0.255536, 0.296829, 0.346404, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cb2n6"]
+bg_color = Color(0.0862745, 0.105882, 0.129412, 0.498039)
+
+[node name="Panel" type="Panel"]
+offset_right = 408.0
+offset_bottom = 512.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bag8f")
+script = ExtResource("1_l07jc")
+
+[node name="DrawingArea" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 408.0
+offset_bottom = 296.0
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cb2n6")
+
+[node name="Button_AddExistingType" type="Button" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 320.0
+offset_right = 256.0
+offset_bottom = 360.0
+text = "Add to existing type"
+
+[node name="List_TypeName" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 320.0
+offset_right = 384.0
+offset_bottom = 360.0
+
+[node name="Button_AddNewType" type="Button" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 384.0
+offset_right = 256.0
+offset_bottom = 424.0
+text = "Add to new type"
+
+[node name="Text_NewName" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 384.0
+offset_right = 384.0
+offset_bottom = 424.0
+
+[node name="Button_ViewAll" type="Button" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 448.0
+offset_right = 384.0
+offset_bottom = 488.0
+text = "View all symbols"
+
+[node name="ResultLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 264.0
+offset_right = 400.0
+offset_bottom = 296.0
+
+[node name="Button_Test" type="Button" parent="."]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 8.0
+offset_right = 393.0
+offset_bottom = 39.0
+text = "test"
+
+[node name="Button_Score" type="Button" parent="."]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 48.0
+offset_right = 394.0
+offset_bottom = 80.0
+text = "score"
